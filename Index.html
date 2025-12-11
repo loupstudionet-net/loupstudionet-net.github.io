@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fary — LOUPSTUDIO</title>
+  <meta name="description" content="Fary — Roguelite 2D. Pixelart fantasy — demo jugable." />
+
+  <!-- Fonts: pixel for titles + sans for body -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="#home">LOUPSTUDIO</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#home">Inicio</a>
+        <a href="#fary">Fary</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy card">
+          <h1 id="hero-title" class="game-title">FARY</h1>
+          <p class="tagline">Roguelite 2D — Pixelart Fantasy</p>
+          <p class="lead">Explora mazmorras antiguas, domina runas elementales y sobrevive a horrores antiguos. Demo jugable y tráiler disponibles.</p>
+
+          <div class="cta">
+            <a class="btn primary" href="#fary">Ver Tráiler</a>
+            <a class="btn secondary" href="#descarga">Descargar Demo</a>
+          </div>
+        </div>
+
+        <div class="hero-media card frame-pixel" aria-hidden="true">
+          <video id="heroVideo" class="hero-video" controls playsinline poster="assets/fary-poster.jpg" preload="metadata" aria-label="Tráiler Fary">
+            <source src="assets/fary-trailer.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+          </video>
+          <div class="media-label">Tráiler — Fary</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FARY SECTION -->
+    <section id="fary" class="section" aria-labelledby="fary-title">
+      <div class="container">
+        <h2 id="fary-title" class="section-title">Tráiler y Demo</h2>
+
+        <div class="feature-grid">
+          <div class="video-block card frame-pixel">
+            <video class="main-video" controls poster="assets/fary-poster.jpg" data-default="assets/fary-trailer.mp4" aria-label="Tráiler / Demo">
+              <source src="assets/fary-trailer.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <aside class="info card">
+            <h3>Sobre Fary</h3>
+            <p>Fary es un roguelite de plataformas y exploración ambientado en un reino antiguo. Combina combate con runas, puzzles y mapas procedurales ligeros.</p>
+            <ul class="features">
+              <li>Demo: 1 nivel completo</li>
+              <li>Mecánicas: salto doble, dash, runas elementales</li>
+              <li>Arte: pixelart detallado + parallax</li>
+              <li>Sonido: banda sonora original</li>
+            </ul>
+
+            <div class="actions">
+              <a class="btn primary" href="#descarga">Descargar Demo</a>
+              <a class="btn ghost" href="#contacto">Solicitar Press Kit</a>
+            </div>
+          </aside>
+        </div>
+
+        <div class="screenshots">
+          <h3>Imágenes</h3>
+          <div class="thumbs" id="thumbs" aria-label="Galería de imágenes">
+            <img src="assets/ss1.jpg" alt="Screenshot 1 — Fary" data-large="assets/ss1.jpg" data-video="assets/fary-trailer.mp4">
+            <img src="assets/ss2.jpg" alt="Screenshot 2 — Fary" data-large="assets/ss2.jpg" data-video="assets/fary-trailer.mp4">
+            <img src="assets/ss3.jpg" alt="Screenshot 3 — Fary" data-large="assets/ss3.jpg" data-video="assets/fary-trailer.mp4">
+          </div>
+        </div>
+
+        <div id="descarga" class="download card">
+          <h3>Descarga la demo</h3>
+          <p>Tamaño aproximado: 120 MB — Builds para Windows y Mac. Enlace de ejemplo; sube a itch.io o tu hosting.</p>
+          <a class="btn disabled" aria-disabled="true">Próximamente</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contacto" class="section" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title" class="section-title">Contacto</h2>
+        <p>Para prensa, colaboraciones o cualquier consulta, usa el formulario.</p>
+
+        <form id="contactForm" class="contact-form card" novalidate>
+          <label for="name">Nombre</label>
+          <input id="name" name="name" type="text" placeholder="Tu nombre" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="tu@correo.com" required>
+
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tu mensaje..." required></textarea>
+
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Enviar</button>
+            <button class="btn ghost" type="reset">Limpiar</button>
+          </div>
+
+          <div class="form-feedback" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© 2025 LOUPSTUDIO — Fary</p>
+      <nav class="socials" aria-label="Redes sociales">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Itch.io">Itch.io</a>
+        <a href="#" aria-label="GitHub">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Modal: image preview -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-wrap card frame-pixel" role="dialog" aria-modal="true" aria-label="Preview imagen">
+      <button class="modal-close" data-close aria-label="Cerrar">✕</button>
+      <div class="modal-body">
+        <img id="modalImg" src="" alt="Preview">
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
