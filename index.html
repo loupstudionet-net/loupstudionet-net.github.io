@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LOUPSTUDIO — Presentación</title>
+  <meta name="description" content="LOUPSTUDIO — Pixelart Fantasy roguelite. Presentación oficial." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div id="preloader" class="preloader" aria-hidden="false">
+    <div class="preloader-inner">
+      <img src="assets/logo-square.png" alt="LOUPSTUDIO" class="prelogo">
+      <div class="pre-text">Cargando LOUPSTUDIO...</div>
+      <div class="pre-bar"><div class="pre-progress" id="preProgress"></div></div>
+    </div>
+  </div>
+
+  <!-- APP -->
+  <div id="app" class="app hidden">
+
+    <!-- TOP CONTROLS -->
+    <div class="top-controls">
+      <button id="themeToggle" class="control-btn" title="Cambiar tema" aria-pressed="false">🌗</button>
+      <button id="audioToggle" class="control-btn" title="Música" aria-pressed="false">♪</button>
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header" role="banner">
+      <div class="container nav-inner">
+        <a href="#home" class="brand" aria-label="LOUPSTUDIO — Inicio">
+          <img src="assets/logo-square.png" alt="LOUPSTUDIO" class="brand-logo">
+        </a>
+
+        <nav class="menu" id="mainNav" aria-label="Navegación principal">
+          <a href="#home">Inicio</a>
+          <a href="#estudio">Estudio</a>
+          <a href="#juegos">Juegos</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <button id="burger" class="burger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <main>
+      <section id="home" class="hero" aria-labelledby="hero-title">
+        <div class="scanlines" aria-hidden="true"></div>
+        <div class="hero-inner container">
+          <div class="hero-left">
+            <img src="assets/logo-wolf.png" alt="Emblema LOUPSTUDIO" class="emblem" id="emblemLogo">
+          </div>
+
+          <div class="hero-right">
+            <img src="assets/logo-main.png" alt="LOUPSTUDIO" class="wordmark" id="wordmarkLogo">
+            <h1 id="hero-title" class="game-title">FARY</h1>
+            <p class="subtitle">Roguelite 2D — Pixelart Fantasy</p>
+
+            <div class="hero-cta">
+              <a class="btn primary" href="#juegos">Ver tráiler</a>
+              <a class="btn secondary" href="#estudio">Entrar al mundo</a>
+            </div>
+
+            <p class="small-note">LOUPSTUDIO • Pixelart Fantasy</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ESTUDIO -->
+      <section id="estudio" class="section">
+        <div class="container">
+          <h2>El Estudio</h2>
+          <p>LOUPSTUDIO crea experiencias 2D con alma retro: pixelart, animaciones por capas y diseño roguelite. 
+          Nuestro enfoque: estética clásica con mecánicas modernas.</p>
+
+          <div class="studio-icons">
+            <div class="studio-card">
+              <img src="assets/logo-wolf.png" class="studio-icon" alt="wolf logo">
+              <h3>Identidad</h3>
+              <p>Iconografía fuerte y reconocible.</p>
+            </div>
+            <div class="studio-card">
+              <img src="assets/logo-square.png" class="studio-icon" alt="square logo">
+              <h3>Pixelart</h3>
+              <p>Sprites, paletas y efectos precisos.</p>
+            </div>
+            <div class="studio-card">
+              <img src="assets/logo-main.png" class="studio-icon" alt="wordmark logo">
+              <h3>Dirección</h3>
+              <p>Arte, sonido y jugabilidad coherentes.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- JUEGOS -->
+      <section id="juegos" class="section games">
+        <div class="container">
+          <h2>Nuestros Juegos</h2>
+
+          <div class="game-card">
+            <div class="game-info">
+              <h3>FARY</h3>
+              <p>Aventura 2D con runas, mazmorras y enemigos memorables.</p>
+              <a class="btn primary" href="#trailer">Ver Tráiler</a>
+            </div>
+            <div class="game-media">
+              <video controls poster="assets/fary-poster.jpg" class="media-video" preload="metadata">
+                <source src="assets/fary-trailer.mp4" type="video/mp4">
+                Tu navegador no soporta vídeo.
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section id="contacto" class="section contact">
+        <div class="container">
+          <h2>Contacto</h2>
+          <p>Prensa, colaboraciones o propuestas profesionales.</p>
+
+          <form id="contactForm" class="contact-form card" novalidate>
+            <label for="name">Nombre</label>
+            <input id="name" name="name" required placeholder="Tu nombre">
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="tu@correo.com">
+
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tu mensaje..."></textarea>
+
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Enviar</button>
+              <button class="btn ghost" type="reset">Limpiar</button>
+            </div>
+            <div class="form-feedback" aria-live="polite"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <img src="assets/logo-main.png" class="footer-logo" alt="LOUPSTUDIO">
+        <p>© 2025 LOUPSTUDIO</p>
+        <div class="socials">
+          <a href="#">Instagram</a>
+          <a href="#">Itch.io</a>
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
